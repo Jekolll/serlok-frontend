@@ -1,5 +1,5 @@
 // src/lib/api.js
-const BASE = "https://web-production-1a78.up.railway.app/"
+const BASE = "https://web-production-1a78.up.railway.app"
 
 const req = async (method, path, body = null) => {
   const token = localStorage.getItem("token")
