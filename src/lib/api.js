@@ -46,8 +46,5 @@ export const api = {
 // WebSocket URL
 export const wsUrl = () => {
   const token = localStorage.getItem("token")
-  const base  = (import.meta.env.VITE_API_URL || "http://localhost:8000")
-    .replace("https://", "wss://")
-    .replace("http://", "ws://")
-  return `${base}/location/ws/${token}`
+  return `wss://web-production-1a78.up.railway.app/location/ws/${token}`
 }
