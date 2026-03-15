@@ -1,5 +1,5 @@
 // src/lib/api.js
-const BASE = import.meta.env.VITE_API_URL || "http://localhost:8000"
+const BASE = "https://web-production-1a78.up.railway.app/"
 
 const req = async (method, path, body = null) => {
   const token = localStorage.getItem("token")
