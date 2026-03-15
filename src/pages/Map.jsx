@@ -95,10 +95,10 @@ export default function Map() {
       iconAnchor:[isMe ? 22 : 18, 40],
     })
 
-    if (markersRef.current[userId]) {
-      markersRef.current[userId].setLatLng([lat, lng])
-      markersRef.current[userId].setIcon(icon)
-    } else {
+  if (markersRef.current[userId]) {
+  markersRef.current[userId].setLatLng([lat, lng])
+  return
+} else {
       const marker = L.marker([lat, lng], { icon })
         .addTo(map)
         .on("click", () => setSelected(userId))
