@@ -95,9 +95,9 @@ export default function Map() {
       iconAnchor:[isMe ? 22 : 18, 40],
     })
 
-  if (markersRef.current[userId]) {
+if (markersRef.current[userId]) {
   markersRef.current[userId].setLatLng([lat, lng])
-  return
+  return  // jangan update icon, biarkan marker yang ada
 } else {
       const marker = L.marker([lat, lng], { icon })
         .addTo(map)
